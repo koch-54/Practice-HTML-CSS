@@ -1,0 +1,87 @@
+div, span{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit; /*inheritは親要素をまねる*/
+    vertical-align: baseline;/*要素の垂直方向を決める　baselineに合わせる*/
+}
+
+.btn-menu{
+    width: 66px;
+    height: 66px;
+    border: solid 1px black;
+    border-radius: 50%;
+    position: fixed;
+    top: 21px;
+    transition: all .2s; /*動き*/
+}
+
+.btn-menu:hover{
+    border: solid 1px #8b0000; /*colorは文字、カーソルが触れたとき赤色の線が出てくる感じ*/
+    background-color: #fa8072;
+}
+/*丸の中に３つの点を表示する*/
+.btn-menu span{
+    display: inline;
+    transition: all.2s;
+    position: absolute;
+    top: 45%;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: black;
+    
+}
+
+.btn-menu span:nth-of-type(1){
+    left: 18px;
+}
+
+.btn-menu span:nth-of-type(2){
+    left: 30px;
+}
+
+.btn-menu span:nth-of-type(3){
+    left: 42px;
+}
+
+.btn-menu:hover span{
+    background: white;
+}
+/*active時の変化*/
+.btn-menu.active{
+    border: solid 1px red;
+}
+/*active時のカーソルが触れたときの変化*/
+.btn-menu.active:hover{
+    background: red;
+}
+/*activeになると３つの点が×になる*/
+.btn-menu.active span:nth-of-type(1){
+    width: 30px;
+    height: 3px;
+    background: red;
+    transform: rotate(45deg);
+    border-radius: 0%;
+}
+
+.btn-menu.active span:nth-of-type(3){
+    width: 30px;
+    height: 3px;
+    background: red;
+    transform: rotate(135deg);
+    left: 18px;
+    border-radius: 0%;
+}
+
+.btn-menu.active span:nth-of-type(2){
+    opacity: 0;
+}
+/*active時のカーソルが触れたときの変化*/
+.btn-menu.active:hover span:nth-of-type(1){
+    background: white;
+}
+
+.btn-menu.active:hover span:nth-of-type(3){
+    background: white;
+}
