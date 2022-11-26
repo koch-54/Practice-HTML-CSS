@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-menu{
+    position: fixed;
+    z-index: 999;
+    bottom: -120%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    transition: all .6s;
+}
+/*activeになったらbottomを0にして上にあげる*/
+.nav-menu.panelactive{
+    bottom: 0;
+}
+/*acitiveのときmenuが多かった時にスクロールできるようにする*/
+.nav-menu.panelactive .nav-list{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+.nav-menu.panelactive ul{
+    position: relative;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.nav-menu li{
+    list-style: none;
+    text-align: center;
+    
+}
+.nav-menu.panelactive li a{
+    width: 40%;
+    color: #333;
+    padding: 0;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+/*navのaに触れると赤色の下線が出る*/
+.nav-menu li a:after{
+    width: 0;
+    height: 2px;
+    content: "";
+    background: #f40000;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all .2s;
+}
+
+.nav-menu li a:hover:after{
+    width: 98%;
+}
+
+/*ボタン作成*/
+.btn-menu{
+    width: 66px;
+    height: 66px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: fixed;
+    left: 21px;    
+    top: 21px;
+    transition: all .4s;
+}
+
+.btn-menu:hover{
+    border: 1px solid #f40000;
+}
+
+.btn-menu span{
+    position: absolute;
+    top: 45%;
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline;
+    transition: all .4s;
+}
+
+.btn-menu span:nth-of-type(1){
+    left: 18px;
+}
+
+.btn-menu span:nth-of-type(2){
+    left: 30px;
+}
+
+.btn-menu span:nth-of-type(3){
+    left: 42px;
+}
+
+.btn-menu:hover span{
+    background: #f40000;
+}
+
+.btn-menu.active{
+    z-index: 9999;
+}
+
+.btn-menu.active span:nth-of-type(1){
+    width: 30px;
+    height: 2px;
+    border-radius: 0;
+    transform: rotate(45deg);
+    top: 48%;
+}
+
+.btn-menu.active span:nth-of-type(3){
+    width: 30px;
+    height: 2px;
+    border-radius: 0;
+    transform: rotate(135deg);
+    left: 18px;
+    top: 48%;
+    
+}
+
+.btn-menu.active span:nth-of-type(2){
+    opacity: 0;
+}
+
+.btn-menu.active:hover{
+    border: 1px solid #f40000;
+}
+
+.btn-menu.active:hover span{
+    background: #f40000;
+}
