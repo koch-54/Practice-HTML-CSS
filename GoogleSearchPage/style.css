@@ -1,0 +1,113 @@
+body{
+    background-color: #202124;
+    height: 100vh;
+    max-height: 100vh;
+    color: white;
+    font-family: arial,sans-serif;
+}
+
+nav div{
+    padding: 6px;
+    margin: 4px;
+}
+
+.nav-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav-img:hover{
+    background-color: #515151;
+    border-radius: 50%;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.gb_Ve{
+    background-size: 32px 32px;
+    width: 28px;
+    height: 28px;
+}
+
+.profile img{
+    background-size: 32px 32px;    
+    border: 0;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    padding: 7vh 0 3vh 0;
+}
+
+.logo img{
+    width: 272px;
+    height: 92px;
+}
+
+.search-icon{
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 10px;
+}
+
+.search-bar{
+    display: flex;
+    width: 572px;
+    height: 44px;
+    border: solid 1px #bdc1c6;
+    border-radius: 100vh;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.search-bar:hover{
+    background-color: #515151;
+    border: none;
+}
+
+.search-box{
+    width: 70vw;
+}
+
+.search-tool{
+    display: flex;
+    margin: 0 12px 0 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.goxjob{
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    margin: 7px;
+}
+
+.search-tool img{
+    width: 20px;
+    height: 20px;
+}
